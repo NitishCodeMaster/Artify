@@ -8,9 +8,6 @@ const cookieParser = require('cookie-parser');
 
 const userRoutes = require('./routes/userRoutes');
 const sellerRoutes = require('./routes/sellerRoutes');
-const connectToDB = require('./config/db');
-
-connectToDB();
 
 app.use(cors({
     origin: "http://localhost:5173",

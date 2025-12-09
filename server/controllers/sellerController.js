@@ -45,7 +45,7 @@ module.exports.registerSeller = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: "Server error", error: error.message });
     }
-}
+} 
 
 module.exports.loginSeller = async (req, res) => {
     try {
@@ -58,7 +58,7 @@ module.exports.loginSeller = async (req, res) => {
         if (!seller) {
             return res.status(400).json({ message: 'Invalid email or password' });
         }
-        const isMatch = await seller.comparePassword(password);
+        const isMatch = await seller.matchPassword(password);
         if (!isMatch) {
             return res.status(400).json({ message: 'Invalid email or password' });
         }

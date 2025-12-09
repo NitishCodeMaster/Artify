@@ -7,7 +7,8 @@ const { authUser } = require('../middleware/authMiddleware');
 router.post('/register', [
     body('name').not().isEmpty().withMessage('Name is required'),
     body('email').isEmail().withMessage('Please include a valid email'),
-    body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long')
+    body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
+    body('phone').not().isEmpty().withMessage('Phone is required')
 ], userController.registerUser);
 
 router.post('/login', [

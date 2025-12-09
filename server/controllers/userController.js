@@ -21,7 +21,7 @@ module.exports.registerUser = async (req, res) => {
         const user = await userModel.create({ name, email, password, phone });
 
         const token = jwt.sign(
-            { id: user._id },
+            { id: user._id, role: 'user' },
             process.env.JWT_SECRET,
             { expiresIn: '7d' }
         );
@@ -65,7 +65,7 @@ module.exports.loginUser = async (req, res) => {
             return res.status(400).json({ message: 'User not found' });
         }
 
-        const isMatch = await user.comparePassword(password);
+        const isMatch = await user.matchPassword(password);
         if (!isMatch) {
             return res.status(400).json({ message: 'Invalid password' });
         }
@@ -90,6 +90,8 @@ module.exports.loginUser = async (req, res) => {
                 id: user._id,
                 name: user.name,
                 email: user.email,
+                profilePic: user.profilePic,
+                role: user.role,
             },
         });
     } catch (error) {
