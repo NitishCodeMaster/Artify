@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar } from "lucide-react";
 
-// OPTIONAL: Replace this with your own image fallback logic
 export function ImageWithFallback({ src, alt, className }) {
     return <img src={src} alt={alt} className={className} />;
 }
@@ -18,7 +17,11 @@ const performers = [
         avatar: "https://images.unsplash.com/photo-1693835777292-cf103dcd2324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxndWl0YXJpc3QlMjBwb3J0cmFpdCUyMG1hbGV8ZW58MXx8fHwxNzY1NTc2OTk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         eventTitle: "Rock Concert Tonight",
         eventLocation: "The Blue Room",
-        eventTime: "9:00 PM"
+        eventTime: "9:00 PM",
+        rightCard: {
+            label: "Live Now",
+            value: "Rock Show"
+        }
     },
     {
         id: 2,
@@ -29,7 +32,11 @@ const performers = [
         avatar: "https://images.unsplash.com/photo-1615748561835-cff146a0b3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaW5nZXIlMjBwb3J0cmFpdCUyMGZlbWFsZXxlbnwxfHx8fDE3NjU1NzY5OTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
         eventTitle: "Jazz Night Live",
         eventLocation: "Soul Lounge",
-        eventTime: "7:30 PM"
+        eventTime: "7:30 PM",
+        rightCard: {
+            label: "Genre",
+            value: "Jazz • R&B"
+        }
     },
     {
         id: 3,
@@ -41,6 +48,10 @@ const performers = [
         eventTitle: "Dance Workshop",
         eventLocation: "Studio 5",
         eventTime: "6:00 PM",
+        rightCard: {
+            label: "Workshop",
+            value: "Today"
+        }
     },
     {
         id: 4,
@@ -52,6 +63,10 @@ const performers = [
         eventTitle: "Art Exhibition",
         eventLocation: "Gallery District",
         eventTime: "5:00 PM",
+        rightCard: {
+            label: "Exhibition",
+            value: "Open"
+        }
     },
 
 ];
@@ -69,7 +84,7 @@ export function PerformerPanel() {
     const current = performers[currentIndex];
 
     return (
-        <div className="relative w-full h-[700px] lg:h-[820px]">
+        <div className="relative w-full h-[560px] lg:h-[620px]">
             <div className="flex justify-end">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -78,9 +93,8 @@ export function PerformerPanel() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.5 }}
-                        className="relative w-[95%] lg:w-full h-[550px] rounded-3xl overflow-hidden shadow-2xl"
+                        className="relative w-[95%] lg:w-full h-[640px] rounded-3xl overflow-hidden shadow-2xl"
                     >
-                        {/* Background Image */}
                         <div className="absolute inset-0">
                             <ImageWithFallback
                                 src={current.image}
@@ -90,17 +104,14 @@ export function PerformerPanel() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                         </div>
 
-                        {/* CONTENT */}
                         <div className="relative h-full flex flex-col justify-between p-6 lg:p-8">
 
-                            {/* Badge */}
                             <div>
                                 <span className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-md text-white border border-white/30">
                                     {current.type}
                                 </span>
                             </div>
 
-                            {/* Bottom Info */}
                             <div className="space-y-4 pb-10 lg:pb-16">
                                 <motion.div
                                     animate={{ y: [0, -8, 0] }}
@@ -124,7 +135,6 @@ export function PerformerPanel() {
                                 </div>
                             </div>
 
-                            {/* Floating Event Card */}
                             <div className="absolute bottom-6 left-6 right-6 lg:left-8 lg:bottom-8 lg:right-auto">
                                 <div className="inline-flex items-center gap-2 px-4 py-3 rounded-2xl bg-white shadow-lg max-w-full">
                                     <Calendar className="w-4 h-4 text-[#6D28D9] flex-shrink-0" />
@@ -137,7 +147,28 @@ export function PerformerPanel() {
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                            <div className="absolute top-10 right-6">
+                                <div className="px-4 py-3 rounded-2xl
+                                              bg-white/10 backdrop-blur-md
+                                              border border-white/20
+                                              shadow-lg
+                                              ">
+                                    <p className="text-xs text-white/70">{current.rightCard.label}</p>
+                                    <p className="text-lg font-semibold text-white">
+                                        {current.rightCard.value}
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                className={`absolute bottom-10 right-8 w-16 h-16 rounded-full blur-2xl
+                                 ${current.type === "Guitarist" && "bg-indigo-500/30"}
+                                 ${current.type === "Singer" && "bg-pink-500/30"}
+                                 ${current.type === "Dancer" && "bg-purple-500/30"}
+                                 ${current.type === "Painter" && "bg-emerald-500/30"}
+                              `}
+                            ></div>
+
+                         </div>
                     </motion.div>
                 </AnimatePresence>
             </div>

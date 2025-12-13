@@ -8,14 +8,24 @@ const Navbar = () => {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-2xl bg-black/20 border-b border-white/5 ">
-            <div className="max-w-7xl mx-auto px-8 lg:px-12">
+            <div className="max-w-[1500px] mx-auto px-10 lg:px-20">
                 <div className="flex items-center justify-between h-20 ">
 
-                    <Link to="/" className="flex items-center gap-2 ml-2">
+                    <Link to="/" className="group relative flex items-center gap-2">
                         <img
                             src={logo}
                             alt="Artify Logo"
-                            className=" w-[200px] h-[110px] object-contain mix-blend-lighten opacity-100 brightness-125 contrast-125 drop-shadow-[0_0_20px_rgba(139,92,246,0.55)] relative top-2"
+                            className="
+                        w-[200px] h-[110px] object-contain
+                        mix-blend-lighten brightness-125 contrast-125
+                        drop-shadow-[0_0_20px_rgba(139,92,246,0.55)]
+                        relative top-2
+
+                        transition-all duration-500 ease-out
+                        hover:scale-[1.06]
+                        hover:brightness-150
+                        hover:drop-shadow-[0_0_35px_rgba(139,92,246,0.9)]
+                        "
                         />
                     </Link>
 
@@ -59,10 +69,16 @@ const Navbar = () => {
                     </nav>
 
                     <div className="hidden md:flex items-center gap-6">
-                        <Link to="/login" className="px-6 py-2.5 text-white/80 hover:text-white transition-colors">
+                        <Link
+                            to="/login"
+                            className="
+                            relative px-6 py-2.5 rounded-full text-white/80 hover:text-white border border-white/20 hover:border-indigo-400/60 bg-white/5 hover:bg-white/10 backdrop-blur-sm transition-all duration-300 ease-out"
+                        >
                             Login
                         </Link>
-                        <Link to="/signup" className="px-6 py-2.5  rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all">
+
+                        <Link to="/signup" className="px-6 py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50  transition-all duration-150 ease-linear
+    hover:scale-[1.02] active:scale-[0.98] ">
                             Sign Up
                         </Link>
                     </div>
