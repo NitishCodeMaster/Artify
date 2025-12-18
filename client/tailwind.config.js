@@ -9,6 +9,9 @@ export default {
         playfair: ["Playfair Display", "serif"],
         poppins: ["Poppins", "sans-serif"],
       },
+      animation: {
+        'bounce-slow': 'bounce 3s infinite',
+      },
     },
   },
   plugins: [],

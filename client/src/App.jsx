@@ -4,12 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar';
 
 import Community from './pages/Community';
-import Discover from './pages/Discover';
-import Event from './pages/Event';
+import Discover from './pages/Discover'; 
 import Home from './pages/Home';
 import Learn from './pages/Learn';
-import Login from './pages/Login';
-import MarketPlace from './pages/MarketPlace'; 
+import Login from './pages/Login'; 
 import Signup from './pages/Signup';
 
 const App = () => {
@@ -23,9 +21,7 @@ const App = () => {
           <Route path="/learn" element={<Learn />} />
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/event" element={<Event />} />
-          <Route path="/marketplace" element={<MarketPlace />} /> 
+          <Route path="/signup" element={<Signup />} /> 
         </Routes>
       </div>
     </>

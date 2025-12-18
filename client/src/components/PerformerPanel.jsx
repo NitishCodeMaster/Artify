@@ -5,6 +5,14 @@ import { Calendar } from "lucide-react";
 export function ImageWithFallback({ src, alt, className }) {
     return <img src={src} alt={alt} className={className} />;
 }
+import performerImg1 from '../assets/Images/PerformerPanel/image1.jpeg';
+import performerImg2 from '../assets/Images/PerformerPanel/image2.jpeg';
+import performerImg3 from '../assets/Images/PerformerPanel/image3.jpeg';
+import performerImg4 from '../assets/Images/PerformerPanel/image4.jpeg';
+import avatarImg1 from '../assets/Images/PerformerPanel/avatar1.jpeg';
+import avatarImg2 from '../assets/Images/PerformerPanel/avatar2.jpeg';
+import avatarImg3 from '../assets/Images/PerformerPanel/avatar3.jpeg';
+import avatarImg4 from '../assets/Images/PerformerPanel/avatar4.jpeg';
 
 const performers = [
 
@@ -13,8 +21,8 @@ const performers = [
         type: "Guitarist",
         name: "Alex Rivera",
         description: "Indie rock guitarist with 5+ years of live performance experience.",
-        image: "https://images.unsplash.com/photo-1574626550228-3fac41f33008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpYyUyMGd1aXRhciUyMG11c2ljaWFuJTIwcGVyZm9ybWluZ3xlbnwxfHx8fDE3NjU1NzY0ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        avatar: "https://images.unsplash.com/photo-1693835777292-cf103dcd2324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxndWl0YXJpc3QlMjBwb3J0cmFpdCUyMG1hbGV8ZW58MXx8fHwxNzY1NTc2OTk0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: performerImg1,
+        avatar: avatarImg1,
         eventTitle: "Rock Concert Tonight",
         eventLocation: "The Blue Room",
         eventTime: "9:00 PM",
@@ -28,8 +36,8 @@ const performers = [
         type: "Singer",
         name: "Maya Chen",
         description: "Soulful vocalist specializing in jazz and R&B performances.",
-        image: "https://images.unsplash.com/photo-1677947226901-5164b32d5cfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        avatar: "https://images.unsplash.com/photo-1615748561835-cff146a0b3a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaW5nZXIlMjBwb3J0cmFpdCUyMGZlbWFsZXxlbnwxfHx8fDE3NjU1NzY5OTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: performerImg2,
+        avatar: avatarImg2,
         eventTitle: "Jazz Night Live",
         eventLocation: "Soul Lounge",
         eventTime: "7:30 PM",
@@ -43,8 +51,8 @@ const performers = [
         type: "Dancer",
         name: "Jordan Blake",
         description: "Contemporary dancer and choreographer for music videos.",
-        image: "https://images.unsplash.com/photo-1758669919481-a965bde1abe4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-        avatar: "https://images.unsplash.com/photo-1758063685635-5aa92329eed1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYW5jZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjU0NzcxOTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: performerImg3,
+        avatar: avatarImg3,
         eventTitle: "Dance Workshop",
         eventLocation: "Studio 5",
         eventTime: "6:00 PM",
@@ -58,8 +66,8 @@ const performers = [
         type: "Painter",
         name: "Sofia Martinez",
         description: "Visual artist creating stunning contemporary paintings and murals.",
-        image: "https://images.unsplash.com/photo-1606355555437-59e0b3f0a703?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWludGVyJTIwYXJ0aXN0JTIwcGFpbnRpbmclMjBjYW52YXN8ZW58MXx8fHwxNzY1NTc2NDgyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-        avatar: "https://images.unsplash.com/photo-1751003801857-30d275cc8243?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYWludGVyJTIwYXJ0aXN0JTIwcG9ydHJhaXQlMjBmZW1hbGV8ZW58MXx8fHwxNjU1NzY5OTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        image: performerImg4,
+        avatar: avatarImg4,
         eventTitle: "Art Exhibition",
         eventLocation: "Gallery District",
         eventTime: "5:00 PM",
@@ -168,7 +176,7 @@ export function PerformerPanel() {
                               `}
                             ></div>
 
-                         </div>
+                        </div>
                     </motion.div>
                 </AnimatePresence>
             </div>
