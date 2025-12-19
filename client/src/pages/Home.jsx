@@ -4,6 +4,8 @@ import { PerformerPanel } from '../components/PerformerPanel';
 import { Features } from '../components/Features';
 import { Events } from '../components/Events';
 import { MarketPlace } from '../components/MarketPlace';
+import { ArtistSpotlight } from '../components/ArtistSpotlight';
+import { MentorshipSection } from '../components/MentorshipSection';
 
 const Home = () => {
     return (
@@ -42,7 +44,7 @@ const Home = () => {
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
                                 </span>
-                                <span className="text-white/70 tracking-wide text-sm font-medium">Where Artists Connect & Create</span>
+                                <span className="text-white/70 tracking-wide text-sm font-medium ">Where Artists Connect & Create</span>
                             </div>
 
                             <h1 className="text-5xl lg:text-7xl text-white leading-[1.1] font-bold font-playfair tracking-tight">
@@ -90,9 +92,12 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <Features />
+            <ArtistSpotlight />
+            <MentorshipSection />
             <Events />
             <MarketPlace />
+            <Features />
+
         </>
     )
 }
