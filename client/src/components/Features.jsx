@@ -49,7 +49,7 @@ const features = [
 
 export function Features() {
     return (
-        <section id="features" className="relative w-full min-h-screen flex flex-col justify-center py-22 bg-black overflow-hidden">
+        <section id="features" className="relative w-full flex flex-col justify-center py-20 pb-0 bg-black overflow-hidden">
 
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-900/20 rounded-full blur-[100px]"></div>

@@ -120,7 +120,7 @@ export function MarketPlace() {
 
     return (
 
-        <section id="marketplace" className="relative w-full py-24 bg-black overflow-hidden">
+        <section id="marketplace" className="relative w-full  pt-12 pb-12 bg-black overflow-hidden">
 
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[500px] 
@@ -131,17 +131,17 @@ export function MarketPlace() {
 
                 <Music className="absolute bottom-[10%] left-[5%] text-white/5 -rotate-12" size={150} strokeWidth={0.5} />
 
-                <VenetianMask className="absolute top-[8%] right-[10%] text-white/5 rotate-12" size={180} strokeWidth={0.5} />
+                <VenetianMask className="absolute top-[7%] right-[10%] text-white/5 rotate-12" size={180} strokeWidth={0.5} />
                 <Speaker className="absolute bottom-[20%] right-[5%] text-white/5 -rotate-[15deg]" size={200} strokeWidth={0.5} />
 
-                <Mic2 className="absolute top-[9%] left-[40%] text-white/5 rotate-[8deg]" size={120} strokeWidth={0.5} />
+                <Mic2 className="absolute top-[6%] left-[40%] text-white/5 rotate-[8deg]" size={120} strokeWidth={0.5} />
 
                 <Palette className="absolute bottom-[30%] left-[20%] text-white/5 -rotate-6" size={80} strokeWidth={0.5} />
 
                 <div className="absolute top-20 right-20 w-64 h-64 bg-purple-900/20 rounded-full blur-[80px]"></div>
                 <div className="absolute bottom-20 left-10 w-80 h-80 bg-orange-900/10 rounded-full blur-[100px]"></div>
 
-                <Sparkles className="absolute top-24 left-1/3 text-pink-500 animate-pulse" size={30} />
+                <Sparkles className="absolute top-14 left-1/3 text-pink-500 animate-pulse" size={30} />
                 
             </div>
 

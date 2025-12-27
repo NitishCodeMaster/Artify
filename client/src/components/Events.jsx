@@ -95,9 +95,9 @@ export function Events() {
     };
 
     return (
-        <section id="events" className="relative w-full pt-24 pb-12 bg-black overflow-hidden">
+        <section id="events" className="relative w-full pt-0 pb-20 bg-black overflow-hidden">
             <div className="absolute inset-0 pointer-events-none">
-                <h1 className="absolute -top-0 left-16 text-[15vw] md:text-[18vw] font-black text-white/[0.03] leading-none select-none font-playfair tracking-tighter whitespace-nowrap pointer-events-none">
+                <h1 className="absolute -top-12 left-16 text-[15vw] md:text-[18vw] font-black text-white/[0.03] leading-none select-none font-playfair tracking-tighter whitespace-nowrap pointer-events-none">
                     EVENTS
                 </h1>
                 <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[100px] animate-pulse"></div>
@@ -116,8 +116,8 @@ export function Events() {
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
-                    <div>
-                        <div className="flex items-center gap-2 mb-2">
+                    <div className='pt-12'>
+                        <div className="flex items-center gap-2 mb-2 text-pink-500">
                             <Sparkles size={16} className="text-yellow-400 animate-pulse" />
                             <span className="text-xs font-bold text-pink-500 tracking-[0.2em] uppercase font-sans">Don't Miss Out</span>
                         </div>
